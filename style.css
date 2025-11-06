@@ -1,0 +1,76 @@
+/* * 基本重置，确保在所有浏览器上显示一致
+ * 并设置深色主题
+ */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 核心样式：深色背景和浅色文字 */
+    background-color: #1a1a1a; /* 一个柔和的深灰色，非纯黑 */
+    color: #e0e0e0;           /* 一个柔和的浅灰色，非纯白 */
+    
+    /* 使用一个更现代、简洁的字体 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* * .container 类 (在 <main> 标签上使用)
+ * 这是实现垂直和水平居中的关键
+ */
+.container {
+    display: flex;
+    flex-direction: column;   /* 让子元素垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center;     /* 水平居中 */
+    
+    min-height: 100vh;       /* 确保容器至少占满整个屏幕的高度 */
+    text-align: center;      /* 内部文本居中 */
+    padding: 20px;           /* 添加一些内边距，以防内容贴边 */
+    box-sizing: border-box;  /* 确保padding不会撑破100%宽度 */
+}
+
+/* 标题 (您的名字) */
+h1 {
+    font-size: 2.5rem; /* rem 是一个相对字体单位，推荐使用 */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* 标题使用纯白色，更突出 */
+}
+
+/* 描述 (您的一句话) */
+p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #a0a0a0; /* 描述文字使用更暗的灰色 */
+}
+
+/* 链接列表的容器 (<ul>) */
+.links {
+    list-style-type: none; /* 移除列表项前面的小圆点 */
+    padding: 0;
+    margin: 0;
+}
+
+/* 链接列表的单个项目 (<li>) */
+.links li {
+    display: inline-block; /* 关键：让列表项水平排列 */
+    margin: 0 15px;      /* 列表项之间的水平间距 */
+}
+
+/* 链接 (<a>) */
+.links a {
+    text-decoration: none;  /* 移除下划线 */
+    color: #00aaff;       /* 使用一个明亮的蓝色作为链接颜色 */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease; /* 添加一个平滑的颜色过渡效果 */
+}
+
+/* 鼠标悬停在链接上时的效果 */
+.links a:hover {
+    color: #ffffff; /* 鼠标悬停时变为白色 */
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
